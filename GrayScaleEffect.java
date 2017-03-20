@@ -1,4 +1,3 @@
-
 import java.awt.Color;
 import java.awt.image.BufferedImage;
 
@@ -9,8 +8,8 @@ public class GrayScaleEffect implements Effect {
 	
 	public BufferedImage image;
 	
-	public GrayScaleEffect(BufferedImage img) {
-		this.image = img;
+	public GrayScaleEffect() {
+		
 	}
 	
 	public BufferedImage applyEffect(BufferedImage image) {
@@ -28,10 +27,6 @@ public class GrayScaleEffect implements Effect {
 			}
 		}
 		
-		return image;
-		
+		return image;	
 	}
-	
-	
-
 }

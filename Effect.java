@@ -1,5 +1,6 @@
 import java.awt.image.BufferedImage;
 
-public interface Effect {
+public interface Effect
+{
 	public BufferedImage applyEffect(BufferedImage image);
 }

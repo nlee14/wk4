@@ -1,5 +1,6 @@
-	
 import java.awt.*;
+import java.io.File;
+import javax.imageio.ImageIO;
 
 public class ImageLoader 
 {
@@ -14,8 +15,16 @@ public class ImageLoader
 	{
 		ImageDocument doc;
 		
-		ImageDocument img = Image.IO.read(filename);
-		ImageDocument doc = new ImageDocument(img);
+		File img = new File(fileName);
+		
+		try {
+			doc = new ImageDocument(img);
+		}
+		catch(Exception e) {
+			System.out.println("error");
+			return null;
+		}
+		
 		return doc;
 	}
 }

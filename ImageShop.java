@@ -1,34 +1,23 @@
-package grayscale;
+import java.io.IOException;
 
-import javafx.scene.effect.Effect;
-
-public class ImageShop {
+public class ImageShop 
+{
 	
 	private ImageDocument image;
 	
 	
-	public void MAIN(String args[]){
+	public static void main(String args[]) throws IOException
+	{
 		
-		Loader loader = new Loader(fileName);
+		ImageLoader loader = new ImageLoader("Image Loader");
 		ImageDocument doc = loader.loadImage();
+		EffectLibrary library = new EffectLibrary();
 		
-		EffectLibrary.initialise();
-		Effect effect=EffectLibrary.getEffect("grayscale");
+		GrayScaleEffect grayscale = new GrayScaleEffect();
+		library.registerEffect("grayscale", grayscale);
+		Effect effect = library.getEffect("grayscale");
 		
-		image outputFile = output;
-				
 		doc.addTransform(effect);
 		doc.renderImage(effect);
-		
 	}
-	
-	private Effect[] processTranstorms(String args[]){
-		return null;
-		
-	}
-	
-    private void  processImage(String Image ,  Effect[] transforms){
-		
-	}
-
 }

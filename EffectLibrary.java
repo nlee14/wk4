@@ -1,12 +1,12 @@
-
 import java.util.HashMap;
 
 public class EffectLibrary {
 	
 	private HashMap<String,Effect> EFFECTS;
 	
-	public void initialise(){
-		
+	public EffectLibrary()
+	{
+		EFFECTS = new HashMap<String,Effect>();
 	}
 	
 	public boolean registerEffect(String name, Effect effect){
