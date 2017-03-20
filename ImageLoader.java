@@ -7,7 +7,7 @@ public class ImageLoader
 		fileName = name;
 	}
 	
-	public void loadImage()
+	public String loadImage()
 	{
 		String doc;
 		
