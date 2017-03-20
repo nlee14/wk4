@@ -1,4 +1,3 @@
-package GrayScale;
 	
 import java.awt.*;
 
