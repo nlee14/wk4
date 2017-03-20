@@ -19,7 +19,7 @@ public class ImageDocument {
 	}
 	
 	public boolean addTransform(Effect t) {
-		t.applyEffect(image);
+		transforms[transforms.length]=t;
 		return true;
 	}
 	
@@ -28,9 +28,9 @@ public class ImageDocument {
 		return true;
 	}
 	
-	public void renderImage(String outFile) throws IOException {
-		File ouptut = new File("grayscale.jpg");
-        ImageIO.write(image, "jpg", ouptut);
+	public void renderImage(Effect effect) throws IOException {
+		effect.applyEffect(image);
+		ImageDocument.writeImage(image, outputFile);
 	}
 	
 	
