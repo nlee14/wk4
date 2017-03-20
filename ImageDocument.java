@@ -1,8 +1,12 @@
+package grayscale;
+
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
 import javax.imageio.ImageIO;
+
+import javafx.scene.effect.Effect;
 
 public class ImageDocument {
 	
@@ -15,7 +19,7 @@ public class ImageDocument {
 	}
 	
 	public boolean addTransform(Effect t) {
-		t.applyEffect(image);
+		transforms[transforms.length]=t;
 		return true;
 	}
 	
@@ -24,7 +28,12 @@ public class ImageDocument {
 		return true;
 	}
 	
-	public void renderImage(Effect outFile) throws IOException {
+	public void renderImage(Effect effect) throws IOException {
+		effect.applyEffect(image);
+		writeImage(image, outputFile);
+	}
+	
+	public void writeImage(BufferedImage image, String output) throws IOException {
 		File ouptut = new File("grayscale.jpg");
         ImageIO.write(image, "jpg", ouptut);
 	}
