@@ -6,11 +6,17 @@ public class EffectLibrary {
 	private HashMap<String,Effect> EFFECTS;
 	
 	public boolean registerEffect(String name, Effect effect){
+		if(EFFECTS.containsKey(name)){
+			return false;
+		}
 		EFFECTS.put(name, effect);
 		return true;
 	}
 	
 	public boolean deregisterEffect(String name){
+		if(!EFFECTS.containsKey(name)){
+			return false;
+		}
 		EFFECTS.remove(name);
 		return true;
 	}
