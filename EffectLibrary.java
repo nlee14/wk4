@@ -5,6 +5,10 @@ public class EffectLibrary {
 	
 	private HashMap<String,Effect> EFFECTS;
 	
+	public void initialise(){
+		
+	}
+	
 	public boolean registerEffect(String name, Effect effect){
 		if(EFFECTS.containsKey(name)){
 			return false;
