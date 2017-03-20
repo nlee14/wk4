@@ -1,0 +1,25 @@
+public class ImageShop {
+	
+	private ImageDocument image;
+	
+	
+	public void MAIN(String args[]){
+		loader= ImageLoader(filName);
+		loader.loadImage();
+		
+		
+	}
+	
+	
+	
+	private Effect[] processTranstorms(String args[]){
+		return null;
+		
+	}
+	
+    private void  processImage(String Image ,  Effect[] transforms){
+    	
+		
+	}
+
+}
