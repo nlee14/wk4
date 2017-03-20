@@ -1,3 +1,7 @@
+package GrayScale;
+	
+import java.awt.*;
+
 public class ImageLoader 
 {
 	private String fileName;
