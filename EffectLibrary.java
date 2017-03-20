@@ -1,4 +1,4 @@
-package week4;
+
 import java.util.HashMap;
 
 public class EffectLibrary {
