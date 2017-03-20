@@ -7,12 +7,12 @@ public class ImageLoader
 		fileName = name;
 	}
 	
-	public String loadImage()
+	public ImageDocument loadImage()
 	{
 		String doc;
 		
-		img = Image.IO.read(filename);
-		doc = ImageDocument(img);
+		ImageDocument img = Image.IO.read(filename);
+		ImageDocument doc = new ImageDocument(img);
 		return doc;
 	}
 }
