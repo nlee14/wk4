@@ -30,9 +30,9 @@ public class EffectLibrary {
 	}
 	
 	public String[] availableEffects(){
-		String[] availableEffects;
+		String[] availableEffects = new String[EFFECTS.size()];
 		
-		availableEffects = EFFECTS.keySet().toArray(new String[0]);
+		availableEffects = EFFECTS.keySet().toArray(availableEffects);
 		
 		return availableEffects;
 	}
